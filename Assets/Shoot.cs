@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
@@ -35,6 +35,10 @@ public class Shoot : MonoBehaviour
            {
                 Launch();
            }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SpawnAmmunition();
+        }
     }
 
     public void Launch()
@@ -75,6 +79,6 @@ public class Shoot : MonoBehaviour
 
     void GameOver()
     {
-        EditorSceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Main Menu");
     }
 }

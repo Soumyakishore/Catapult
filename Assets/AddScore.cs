@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class AddScore : MonoBehaviour {
 
+    public GameObject explosion;
 
     // Use this for initialization
     void Start () {
@@ -19,22 +20,26 @@ public class AddScore : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.collider.tag);
-        
-        if(collision.collider.tag == "WallBlock")
+    
+        if (collision.collider.tag == "WallBlock")
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Score>().UpdateScore(100);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Score>().UpdateScore(1000);
+           // Instantiate(explosion, transform.position, transform.rotation);
         }
         if(collision.collider.tag == "TowerCube")
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Score>().UpdateScore(500);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Score>().UpdateScore(5000);
+           // Instantiate(explosion, transform.position, transform.rotation);
         }
         if (collision.collider.tag == "Ukkeli")
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Score>().UpdateScore(5000);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Score>().UpdateScore(50000);
+          //  Instantiate(explosion, transform.position, transform.rotation);
         }
         if (collision.collider.tag == "CenterTower")
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Score>().UpdateScore(1000);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Score>().UpdateScore(10000);
+           // Instantiate(explosion, transform.position, transform.rotation);
         }
     }
 }
