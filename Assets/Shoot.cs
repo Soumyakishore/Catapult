@@ -37,6 +37,7 @@ public class Shoot : MonoBehaviour
     {
         launchAnim.SetTrigger("Shoot");
         ballNumber += 1;
+        ShowAmmunition(ballNumber);
     }
     
     // Animaattorin keskivaiheilla

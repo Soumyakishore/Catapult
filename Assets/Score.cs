@@ -22,7 +22,6 @@ public class Score : MonoBehaviour {
     {
         totalScore += addedScore;
         scoreText = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Text>();
-        Debug.Log(scoreText);
         scoreText.text = "Score: " + totalScore;
     }
 }
