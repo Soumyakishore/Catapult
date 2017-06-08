@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.SceneManagement;
+using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class Shoot : MonoBehaviour
     public Animator launchAnim;
     Vector3 cupPosition;
     public int ballNumber = 0;
+
+    public Text ammunitionText;
+    int ammunitionLeft;
 
     // Use this for initialization
     void Start()
@@ -37,9 +41,8 @@ public class Shoot : MonoBehaviour
     {
         launchAnim.SetTrigger("Shoot");
         ballNumber += 1;
-        ShowAmmunition(ballNumber);
     }
-    
+
     // Animaattorin keskivaiheilla
     public void ShootCow()
     {
@@ -63,6 +66,7 @@ public class Shoot : MonoBehaviour
             ball = rb.gameObject;
             Camera.main.GetComponent<CameraFollow>().ResetCamera(ball);
             //cameraFollow.ResetCamera(ball);
+            ball.GetComponent<Score>().ShowAmmunition(ballNumber);
         } else
         {
             GameOver();

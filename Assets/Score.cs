@@ -7,7 +7,9 @@ public class Score : MonoBehaviour {
 
     public int totalScore;
     public Text scoreText;
+    public Text ammunitionText;
 
+    int ammunitionLeft;
 	// Use this for initialization
 	void Start () {
         totalScore = 0;
@@ -23,5 +25,12 @@ public class Score : MonoBehaviour {
         totalScore += addedScore;
         scoreText = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Text>();
         scoreText.text = "Score: " + totalScore;
+    }
+
+    public void ShowAmmunition(int ballNumber)
+    {
+        ammunitionLeft = 5 - ballNumber;
+        ammunitionText = GameObject.FindGameObjectWithTag("AmmunitionText").GetComponent<Text>();
+        ammunitionText.text = "Ammunition left: " + ammunitionLeft;
     }
 }

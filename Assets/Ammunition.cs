@@ -18,10 +18,4 @@ public class Ammunition : MonoBehaviour {
 		
 	}
 
-    public void ShowAmmunition(int ballNumber)
-    {
-        ammunitionLeft = 5 - ballNumber;
-        ammunitionText = GameObject.FindGameObjectWithTag("AmmunitionText").GetComponent<Text>();
-        ammunitionText.text = "Ammunition left: " + ammunitionLeft;
-    }
 }
