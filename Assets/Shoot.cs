@@ -21,10 +21,13 @@ public class Shoot : MonoBehaviour
     public Text ammunitionText;
     int ammunitionLeft;
 
+    public float SpawnTime = 5.0f;
+
     // Use this for initialization
     void Start()
     {
         launchAnim = GetComponent<Animator>();
+        rb.GetComponent<Score>().ShowAmmunition(0);
     }
 
     // Update is called once per frame
@@ -35,16 +38,13 @@ public class Shoot : MonoBehaviour
            {
                 Launch();
            }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SpawnAmmunition();
-        }
     }
 
     public void Launch()
     {
         launchAnim.SetTrigger("Shoot");
         ballNumber += 1;
+        Invoke("SpawnAmmunition", SpawnTime);
     }
 
     // Animaattorin keskivaiheilla
@@ -68,9 +68,9 @@ public class Shoot : MonoBehaviour
 
             //CameraFollow cameraFollow = gameObject.GetComponent<CameraFollow>();
             ball = rb.gameObject;
+            ball.GetComponent<Score>().ShowAmmunition(ballNumber);
             Camera.main.GetComponent<CameraFollow>().ResetCamera(ball);
             //cameraFollow.ResetCamera(ball);
-            ball.GetComponent<Score>().ShowAmmunition(ballNumber);
         } else
         {
             GameOver();

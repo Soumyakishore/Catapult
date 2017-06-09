@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1f22c8f26d322fe4b973ff75e15c52b1
+timeCreated: 1496989958
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HappyMonksMedievalLookingScript
+  fontNames:
+  - HappyMonksMedievalLookingScript
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

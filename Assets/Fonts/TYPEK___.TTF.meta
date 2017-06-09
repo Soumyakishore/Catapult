@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 998847e8e31d3434ca5f5bc5a86f5c97
+timeCreated: 1496990035
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Type Knight
+  fontNames:
+  - Type Knight
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
